@@ -1,0 +1,40 @@
+### 🔍 ดูรายการ users ทั้งหมด
+GET http://localhost:3000/users
+Content-Type: application/json
+
+###
+
+### 🔍 ดู user รายตัว (id = 1)
+GET http://localhost:3000/users/1
+Content-Type: application/json
+
+###
+
+### ➕ เพิ่ม user ใหม่
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "id": "3",
+  "name": "Alice",
+  "email": "alice@example.com",
+  "role": "admin"
+}
+
+###
+
+### ✏️ อัปเดต user (id = 3)
+PATCH http://localhost:3000/users/5
+Content-Type: application/json
+
+{
+  "name": "xxAlice Updated",
+  "email": "xxalice@newdomain.com",
+  "role": ""
+}
+
+###
+
+### ❌ ลบ user (id = 3)
+DELETE http://localhost:3000/users/3
+Content-Type: application/json
